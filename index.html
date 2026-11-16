@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>먼저가져가 - 선착순 나눔</title><link rel="stylesheet" href="/static/styles.css"></head>
+<body>
+<header><div class="wrap nav"><div class="brand"><span class="logo">🎁</span><div><b>먼저가져가</b><small>좋은 물건, 좋은 이웃에게</small></div></div><button class="primary" id="open">＋ 물건 등록</button></div></header>
+<section class="hero"><div class="wrap"><div class="heroBox"><i></i><div class="heroContent"><span class="pill">⚡ 먼저 신청한 한 명에게 나눔돼요</span><h1>안 쓰는 물건이<br><span>누군가의 보물</span>이 되도록.</h1><p>물건을 등록하고, 검색하고, 선착순으로 신청하세요. 모든 사용자가 같은 나눔 현황을 확인합니다.</p></div></div></div></section>
+<main class="wrap"><div class="sectionHead"><div><div class="eyebrow">지금 나눔 중</div><h2>새 주인을 기다려요</h2></div><input id="search" class="search" placeholder="🔎  물건이나 동네 검색"></div><div class="filters" id="filters"></div><div class="grid" id="grid"></div></main>
+<div class="modal" id="modal"><form class="sheet" id="form"><div class="sheetTop"><div><div class="eyebrow">새 나눔</div><h2>어떤 물건을 나눌까요?</h2></div><button type="button" class="close" id="close">✕</button></div><div class="form">
+<label>물건 이름<input name="title" required maxlength="80" placeholder="예: 미니 선풍기"></label><label>물건 설명<textarea name="description" required maxlength="500" rows="3" placeholder="상태와 특징을 알려주세요"></textarea></label><div class="row"><label>분류<select name="category"><option>생활</option><option>디지털</option><option>도서</option><option>의류</option><option>기타</option></select></label><label>나눔 동네<input name="location" required maxlength="50" placeholder="예: 성수동"></label></div><label>나눔하는 분<input name="giver" required maxlength="40" placeholder="이름 또는 별명"></label><label>사진 주소 (선택)<input name="imageUrl" type="url" placeholder="https://..."></label><button class="submit">나눔 등록하기</button></div></form></div>
+<div class="modal" id="claimModal"><form class="sheet claimSheet" id="claimForm"><div class="sheetTop"><div><div class="eyebrow">선착순 신청</div><h2 id="claimTitle">나눔받기</h2></div><button type="button" class="close" id="claimClose">✕</button></div><label>신청자 이름<input name="name" required maxlength="40" placeholder="이름 또는 별명"></label><button class="submit">신청 확정</button></form></div>
+<div class="toast" id="toast"></div><script src="/static/app.js"></script></body></html>
