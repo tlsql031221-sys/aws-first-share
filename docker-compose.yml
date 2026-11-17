@@ -4,6 +4,10 @@ services:
     restart: unless-stopped
     environment:
       DB_PATH: /data/share.db
+      SECRET_KEY: ${SECRET_KEY:-development-only-secret}
+      ADMIN_USERNAME: ${ADMIN_USERNAME:-}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-}
+      ADMIN_DISPLAY_NAME: ${ADMIN_DISPLAY_NAME:-관리자}
     volumes:
       - share_data:/data
   nginx:
